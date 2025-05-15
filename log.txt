@@ -1,0 +1,7 @@
+2024-05-01 08:15:00 - login attempt - user: admin - failed
+2024-05-01 08:15:03 - login attempt - user: admin - failed
+2024-05-01 08:15:05 - login attempt - user: admin - failed
+2024-05-01 08:15:10 - login attempt - user: admin - success
+2024-05-01 08:25:00 - login attempt - user: guest - failed
+2024-05-01 08:25:02 - login attempt - user: guest - failed
+2024-05-01 08:25:04 - login attempt - user: guest - failed

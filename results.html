@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Attack Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #ccc; }
+        th { background-color: #333; color: white; }
+        tr.warning { background-color: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>Login Attack Report</h1>
+    {% if attacks %}
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Message</th>
+                <th>Log Entries</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for attack in attacks %}
+            <tr class="warning">
+                <td>{{ attack.user }}</td>
+                <td>{{ attack.message }}</td>
+                <td>
+                    <ul>
+                        {% for entry in attack.log %}
+                        <li>{{ entry }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No brute force attacks detected. System is safe ✅</p>
+    {% endif %}
+</body>
+</html>
